@@ -3,15 +3,30 @@
         xmlns:vm="using:ThePiperAtTheGatesOfDawnTools.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:ThePiperAtTheGatesOfDawnTools.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="ThePiperAtTheGatesOfDawnTools.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="ThePiperAtTheGatesOfDawnTools">
+        x:Class="ThePiperAtTheGatesOfDawnTools.Views.MainWindow" Width="800" Height="450"
+        Icon="/Assets/avalonia-logo.ico" FontFamily="LXGW WenKai Lite"
+        Title="破晓之门的风笛手工具盒" WindowStartupLocation="CenterScreen">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <TabControl TabStripPlacement="Left">
+        <TabItem Header="歌曲位置" ToolTip.Tip="解析每首歌曲在专辑中的位置">
+            <ScrollViewer>
+                <views:TrackPositionView Margin="10"/>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="专辑下载"></TabItem>
+        <TabItem Header="封面制作"></TabItem>
+        <TabItem Header="视频生成" ToolTip.Tip="从音频文件整合为视频">
+            <ScrollViewer>
+                
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="标签模板"></TabItem>
+    </TabControl>
+    
 </Window>

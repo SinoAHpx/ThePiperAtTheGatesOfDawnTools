@@ -5,8 +5,16 @@
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
+    <Application.Resources>
 
+    </Application.Resources>
     <Application.Styles>
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style Selector="TextBlock.h2">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
         <FluentTheme Mode="Light"/>
     </Application.Styles>
 </Application>
