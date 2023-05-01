@@ -24,11 +24,9 @@
                 9. Sunset (3:45)
             </TextBox.Watermark>
         </TextBox>
-        <Button Command="{Binding ParseCommand}" Margin="0,10,0,0" Content="解析" Width="80" HorizontalContentAlignment="Center"
+        <Button Command="{Binding ParseCommand}" Margin="0,10,0,0" Content="解析并复制" Width="120" HorizontalContentAlignment="Center"
                 HorizontalAlignment="Right" />
         <TextBox Text="{Binding ParsedTracks}" Margin="0,10,0,0" IsVisible="{Binding IsParsed}" />
-        <Button Command="{Binding CopyCommand}" Margin="0,10,0,0" Content="复制" Width="80" HorizontalContentAlignment="Center"
-                HorizontalAlignment="Right" />
     </StackPanel>
 
 
